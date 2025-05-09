@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Cathy Li</title>
+
+    <meta name="author" content="Cathy Li">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- It's recommended to prepare your own favicon.ico and place it in images/favicon/ -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f8f8;
+      }
+      table {
+        border-collapse: separate; /* Changed from 'separate' to allow spacing to work as intended in some browsers */
+      }
+      a {
+        color: #007bff; /* A standard link color */
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .name {
+        font-size: 2.5em; /* Increased font size for the name */
+        font-weight: bold;
+        color: #333; /* Darker color for name */
+        margin-bottom: 0.5em; /* Added margin for spacing */
+      }
+      .papertitle {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #2c3e50; /* A slightly different color for paper titles */
+      }
+      .highlight {
+        background-color: #ffffd0; /* Original highlight color */
+        padding: 0.1em 0.3em;
+        border-radius: 3px;
+      }
+      .hoverZoomLink img {
+        transition: transform 0.2s ease-in-out;
+      }
+      .hoverZoomLink img:hover {
+        transform: scale(1.05);
+      }
+      .one {
+        position: relative;
+        display: inline-block; /* Ensures the container fits its content */
+      }
+      .two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        background-color: rgba(0,0,0,0.1); /* Slight overlay to indicate interactivity */
+      }
+      .two video, .two img { /* Ensure video/image inside .two fills the container */
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover the area without distorting aspect ratio */
+      }
+      .profile-table-container td {
+        padding: 2.5%;
+        vertical-align: middle;
+      }
+      .profile-text-cell {
+        width: 63%;
+      }
+      .profile-image-cell {
+        width: 37%;
+        max-width: 37%;
+      }
+      .profile-image-cell img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #fff; /* Added a white border to the profile image */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added a subtle shadow */
+      }
+      .section-title {
+        color: #333;
+        border-bottom: 2px solid #007bff; /* Accent color for section titles */
+        padding-bottom: 0.3em;
+        margin-bottom: 1em;
+      }
+      .project-entry {
+        margin-bottom: 20px; /* Spacing between project entries */
+        padding: 16px;
+        background-color: #fff; /* White background for project entries */
+        border-radius: 8px; /* Rounded corners for project entries */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for project entries */
+      }
+      .project-entry:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+      }
+      .project-entry td {
+        padding: 8px; /* Reduced padding inside project entries for compactness */
+      }
+      .colored-box {
+        padding: 10px;
+        border-radius: 5px;
+        color: white; /* Text color for colored boxes */
+        text-align: center;
+      }
+      .colored-box h2 {
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .name {
+          font-size: 2em;
+        }
+        .profile-text-cell,
+        .profile-image-cell {
+          width: 100%;
+          max-width: 100%;
+          display: block; /* Stack them */
+          text-align: center; /* Center content when stacked */
+        }
+        .profile-image-cell img {
+          max-width: 200px; /* Limit image size on mobile */
+          margin: 0 auto 20px auto; /* Center image and add margin */
+        }
+        .project-entry td {
+            display: block; /* Stack project image and text on small screens */
+            width: 100% !important; /* Override inline styles */
+            text-align: center; /* Center content */
+        }
+        .project-entry .one {
+            margin-bottom: 10px;
+        }
+        .project-entry img, .project-entry video {
+            max-width: 200px; /* Control image/video size in project */
+            margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <!-- Profile Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;" class="profile-table-container"><tbody>
+            <tr style="padding:0px">
+              <td class="profile-text-cell">
+                <p class="name" style="text-align: center;">
+                  Cathy Li
+                </p>
+                <!-- Modify the paragraph below with your own introduction -->
+                <p>Welcome to my personal homepage. I am passionate about [Your Field/Interests, e.g., Software Development, Data Science, User Experience Design].</p>
+                <p>Here you can briefly introduce your background, skills, and experience. For example: I am a [Your Role/Identity] specializing in [Your Area of Expertise]. I hold a [Your Degree/Achievement] and have in-depth experience in [Relevant Experience].</p>
+                <p style="text-align:center">
+                  <!-- Modify the links below with your own links -->
+                  <a href="mailto:cathy.li@example.com">Email</a> &nbsp;/&nbsp;
+                  <a href="#">CV</a> &nbsp;/&nbsp;
+                  <a href="#">Bio</a> &nbsp;/&nbsp;
+                  <a href="#">Scholar (or academic profile)</a> &nbsp;/&nbsp;
+                  <a href="#">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="#">Github</a>
+                </p>
+              </td>
+              <td class="profile-image-cell">
+                <!-- Replace the image path below with your own profile picture path -->
+                <a href="images/CathyLi.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="Cathy Li profile photo" src="images/CathyLi.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <!-- Projects Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2 class="section-title">Projects / Portfolio</h2>
+                <!-- Modify the paragraph below with your own introduction to projects/portfolio -->
+                <p>
+                  This section showcases the projects and works I have been involved in or completed. I have a strong interest in [Your Interested Technologies or Fields, e.g., building scalable web applications, leveraging machine learning to solve real-world problems, designing intuitive user interfaces].
+                  Below are some projects I am proud of <span class="highlight">(you can highlight key projects)</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <!-- Example Project Entry -->
+          <!-- You can copy the <tr class="project-entry">...</tr> structure below to add more projects -->
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr class="project-entry" onmouseout="project1_stop()" onmouseover="project1_start()">
+              <td style="padding:16px;width:25%;vertical-align:middle; text-align:center;">
+                <div class="one">
+                  <div class="two" id='project1_image_overlay'>
+                    <!-- Replace with your project video preview -->
+                    <video width="100%" height="100%" muted autoplay loop>
+                      <source src="images/project_video.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <!-- Replace with your project static image preview -->
+                  <img src='images/project_image.jpg' alt="Project 1 Preview" style="width:100%; max-width:180px; border-radius:8px;">
+                </div>
+                <script type="text/javascript">
+                  function project1_start() {
+                    document.getElementById('project1_image_overlay').style.opacity = "1";
+                  }
+                  function project1_stop() {
+                    document.getElementById('project1_image_overlay').style.opacity = "0";
+                  }
+                  project1_stop(); // Initialize with video hidden
+                </script>
+              </td>
+              <td style="padding:16px;width:75%;vertical-align:middle">
+                <!-- Replace with your project link and title -->
+                <a href="#"> 
+                  <span class="papertitle">My Project Title 1</span>
+                </a>
+                <br>
+                <!-- Replace with your project contributors or team members -->
+                Cathy Li, Collaborator A, Collaborator B 
+                <br>
+                <!-- Replace with project status or publication venue -->
+                <em>Ongoing / Completed / Published in [Conference/Journal]</em>, Year
+                <br>
+                <!-- Replace with project-related links -->
+                <a href="#">Project Page</a>
+                /
+                <a href="#">Code Repository</a>
+                /
+                <a href="#">Demo Video</a>
+                <p></p>
+                <!-- Replace with your project summary -->
+                <p>
+                  This is a brief description of my Project 1. This project aims to solve [Problem] by using [Technology/Method]. We achieved [Results/Progress].
+                </p>
+              </td>
+            </tr>
+
+            <!-- Add more project entries here -->
+            <!-- 
+            <tr class="project-entry" onmouseout="project2_stop()" onmouseover="project2_start()">
+              <td style="padding:16px;width:25%;vertical-align:middle; text-align:center;">
+                <div class="one">
+                  <div class="two" id='project2_image_overlay'>
+                    <video width="100%" height="100%" muted autoplay loop>
+                      <source src="images/project2_video.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <img src='images/project2_image.jpg' alt="Project 2 Preview" style="width:100%; max-width:180px; border-radius:8px;">
+                </div>
+                <script type="text/javascript">
+                  function project2_start() { document.getElementById('project2_image_overlay').style.opacity = "1"; }
+                  function project2_stop() { document.getElementById('project2_image_overlay').style.opacity = "0"; }
+                  project2_stop();
+                </script>
+              </td>
+              <td style="padding:16px;width:75%;vertical-align:middle">
+                <a href="#"><span class="papertitle">My Project Title 2</span></a><br>
+                Cathy Li<br>
+                <em>Project Status</em>, Year<br>
+                <a href="#">Project Link</a>
+                <p></p>
+                <p>Description of Project 2.</p>
+              </td>
+            </tr>
+            -->
+
+          </tbody></table>
+
+          <!-- Additional Links Section -->
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2 class="section-title">More Links</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 15px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <tr>
+              <td align="center" style="padding:16px;width:25%;vertical-align:middle">
+                 <div class="colored-box" style="background-color: #fcb97d;">
+                     <h2>Blog / Articles</h2>
+                 </div>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <!-- Add your blog or article links here -->
+                <a href="#">My First Blog Post</a><br>
+                <a href="#">Thoughts on [A Certain Topic]</a><br>
+                <a href="#">Tech Tutorial: How to [Do Something]</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:25%;vertical-align:middle">
+                 <div class="colored-box" style="background-color: #aaba9e;">
+                     <h2>Interests / Hobbies</h2>
+                 </div>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <!-- Describe your interests and hobbies here -->
+                <p>Outside of my professional field, I also enjoy [Your Hobby 1, e.g., Photography, Hiking, Reading Sci-Fi Novels].</p>
+                <p>I am also interested in [Your Hobby 2, e.g., Learning New Languages, Cooking, Open Source Contributions].</p>
+              </td>
+            </tr>
+            
+            <tr>
+              <td align="center" style="padding:16px;width:25%;vertical-align:middle">
+                 <div class="colored-box" style="background-color: #c6b89e;">
+                     <h2>Contact</h2>
+                 </div>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                  <p>You can reach me via <a href="mailto:cathy.li@example.com">Email</a>.</p>
+                  <p>You can also find me on <a href="#">LinkedIn</a>.</p>
+              </td>
+            </tr>
+            
+          </tbody></table>
+
+          <!-- Footer -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:collapse;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  This webpage template is based on Jon Barron's personal homepage design. You are free to use and modify the <a href="https://github.com/jonbarron/jonbarron_website">original source code</a> of this template.
+                  If you'd like to use a more modern Jekyll-based version, consider <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a>.
+                </p>
+                <p style="text-align:right;font-size:small;">&copy; <script>document.write(new Date().getFullYear())</script> Cathy Li. All rights reserved.</p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
